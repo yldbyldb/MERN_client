@@ -7,40 +7,40 @@ import moment from 'moment';
 // import useStyles from './styles';
 
 const Post = ({ post, setCurrentId }) => {
-    // const classes = useStyles();
-    console.log(post)
-    return (
-        <Card>
-            <CardMedia image={post.selectedFiles} title={post.title}/>
-            <div>
-                <Typography variant='h6'>{post.creator}</Typography>
-                <Typography variant='body2'>{moment(post.createdAt).fromNow()}</Typography>
-            </div>
-            <div>
-                <Button style={{color: 'white'}} size='small' onClick={() => setCurrentId(post._id)}>
-                    <MoreHorizIcon fontSize='default'/>
-                </Button>
-            </div>
-            <div>
-                <Typography variant='body2' color='textSecondary'>{post.tags.map(tag => `#${tag} `)}</Typography>
-            </div>
-            <CardContent>
-                <Typography variant='h3' gutterBottom>{post.title}</Typography>
-                <Typography variant='h5' gutterBottom>{post.message}</Typography>
-            </CardContent>
-            <CardActions>
-                <Button size='small' color='primary' onClick={() => {}}>
-                    <ThumbUpAltIcon fontSize='small'/>
-                    Like
-                    {post.likeCount}
-                </Button>
-                <Button size='small' color='primary' onClick={() => {}}>
-                    <DeleteIcon fontSize='small'/>
-                    Delete
-                </Button>
-            </CardActions>
-        </Card>
-    );
+	// const classes = useStyles();
+	console.log(post)
+	return (
+		<Card>
+			<CardMedia image={post.selectedFiles} title={post.title} />
+			<div>
+				<Typography variant='h6'>{post.creator}</Typography>
+				<Typography variant='body2'>{moment(post.createdAt).fromNow()}</Typography>
+			</div>
+			<div>
+				<Button style={{ color: 'white' }} size='small' onClick={() => setCurrentId(post._id)}>
+					<MoreHorizIcon fontSize='default' />
+				</Button>
+			</div>
+			<div>
+				<Typography variant='body2' color='textSecondary'>{post.tags.map(tag => `#${tag} `)}</Typography>
+			</div>
+			<CardContent>
+				<Typography variant='h3' gutterBottom>{post.title}</Typography>
+				<Typography variant='h5' gutterBottom>{post.message}</Typography>
+			</CardContent>
+			<CardActions>
+				<Button size='small' color='primary' onClick={() => { }}>
+					<ThumbUpAltIcon fontSize='small' />
+					Like
+					{post.likeCount}
+				</Button>
+				<Button size='small' color='primary' onClick={() => { }}>
+					<DeleteIcon fontSize='small' />
+					Delete
+				</Button>
+			</CardActions>
+		</Card>
+	);
 }
 
 export default Post;
