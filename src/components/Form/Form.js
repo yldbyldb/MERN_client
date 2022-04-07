@@ -1,9 +1,9 @@
-import { Button, Paper, TextField, Typography } from '@material-ui/core';
-import React, { useState, useEffect } from 'react';
-import FileBase from 'react-file-base64';
-import { useDispatch, useSelector } from 'react-redux';
-import { createPost, updatePost } from '../../actions/posts';
-// import useStyles from './styles';
+import { Button, Paper, TextField, Typography } from '@material-ui/core'
+import React, { useState, useEffect } from 'react'
+import FileBase from 'react-file-base64'
+import { useDispatch, useSelector } from 'react-redux'
+import { createPost, updatePost } from '../../actions/posts'
+// import useStyles from './styles'
 
 const Form = ({ currentId, setCurrentId }) => {
 	const [postData, setPostData] = useState({
@@ -20,7 +20,7 @@ const Form = ({ currentId, setCurrentId }) => {
 		if (post) setPostData(post)
 	}, [post])
 	const handleSubmit = (e) => {
-		e.preventDefault();
+		e.preventDefault()
 		if (currentId) {
 			dispatch(updatePost(currentId, postData))
 		} else {
@@ -35,11 +35,11 @@ const Form = ({ currentId, setCurrentId }) => {
 			message: '',
 			tags: '',
 			selectedFiles: ''
-		});
+		})
 		setCurrentId(null)
 	}
 
-	// const classes = useStyles();
+	// const classes = useStyles()
 	return (
 		// <h1>FORM</h1>
 		<Paper>
@@ -57,7 +57,7 @@ const Form = ({ currentId, setCurrentId }) => {
 				<Button variant="contained" color="secondary" size="small" fullWidth onClick={clear}>Clear</Button>
 			</form>
 		</Paper>
-	);
+	)
 }
 
-export default Form;
+export default Form

@@ -1,18 +1,18 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { Grid, CircularProgress } from '@material-ui/core';
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { Grid, CircularProgress } from '@material-ui/core'
 
-import Post from './Post/Post';
-// import useStyles from './styles';
+import Post from './Post/Post'
+// import useStyles from './styles'
 
 const Posts = ({setCurrentId}) => { 
     const posts = useSelector((state) => {
         console.log(state) //这里的state是combineReducers以后的一个object,posts仅仅是其中的一个，还会用其他的
         return state.posts
-    });   
-    // const posts = useSelector((state) => state.posts);   
-    console.log(posts);
-    // const classes = useStyles();
+    })   
+    // const posts = useSelector((state) => state.posts)   
+    console.log(posts)
+    // const classes = useStyles()
     return (
         !posts.length ? <CircularProgress /> :
             <Grid container alignItems='stretch' spacing={3}>
@@ -25,7 +25,7 @@ const Posts = ({setCurrentId}) => {
         // <>
         //     <h1>POSTS</h1>
         // </>
-    );
+    )
 }
 
-export default Posts;
+export default Posts
