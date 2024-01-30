@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Typography, Container, Avatar, Button, Paper, Grid, Icon } from '@material-ui/core'
 import LockOutlinedIcon from "@material-ui/icons/LockOpenOutlined"
- import { GoogleLogin } from "react-google-login"
+import { GoogleLogin } from "react-google-login"
 
 import Input from './Input'
 
